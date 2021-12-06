@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{431D80FD-76F8-3ECD-8D4A-792D03E79231}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>sandBox_bin</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sandBox_bin.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sandBox_bin</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sandBox_bin.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sandBox_bin</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sandBox_bin.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sandBox_bin</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sandBox_bin.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sandBox_bin</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glad\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glfw\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\.;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..\imgui\examples;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\stb;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;IGL_STATIC_LIBRARY;NOMINMAX;IMGUI_IMPL_OPENGL_LOADER_GLAD;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;IGL_STATIC_LIBRARY;NOMINMAX;IMGUI_IMPL_OPENGL_LOADER_GLAD;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glad\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glfw\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\.;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..\imgui\examples;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\stb;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glad\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glfw\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\.;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..\imgui\examples;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\stb;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\Debug\igl.lib;..\..\Debug\igl_opengl.lib;..\..\Debug\igl_opengl_glfw.lib;..\..\Debug\igl_opengl_glfw_imgui.lib;..\..\Debug\igl_png.lib;..\..\Debug\igl_opengl_glfw.lib;..\..\Debug\imgui.lib;..\..\Debug\glfw3.lib;..\..\Debug\igl_opengl.lib;..\..\Debug\igl.lib;opengl32.lib;..\..\Debug\glad.lib;..\..\Debug\igl_stb_image.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/Debug/sandBox_bin.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/sandBox_bin.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glad\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glfw\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\.;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..\imgui\examples;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\stb;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IGL_STATIC_LIBRARY;NOMINMAX;IMGUI_IMPL_OPENGL_LOADER_GLAD;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IGL_STATIC_LIBRARY;NOMINMAX;IMGUI_IMPL_OPENGL_LOADER_GLAD;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glad\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glfw\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\.;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..\imgui\examples;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\stb;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glad\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glfw\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\.;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..\imgui\examples;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\stb;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\Release\igl.lib;..\..\Release\igl_opengl.lib;..\..\Release\igl_opengl_glfw.lib;..\..\Release\igl_opengl_glfw_imgui.lib;..\..\Release\igl_png.lib;..\..\Release\igl_opengl_glfw.lib;..\..\Release\imgui.lib;..\..\Release\glfw3.lib;..\..\Release\igl_opengl.lib;..\..\Release\igl.lib;opengl32.lib;..\..\Release\glad.lib;..\..\Release\igl_stb_image.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/Release/sandBox_bin.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/sandBox_bin.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glad\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glfw\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\.;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..\imgui\examples;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\stb;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IGL_STATIC_LIBRARY;NOMINMAX;IMGUI_IMPL_OPENGL_LOADER_GLAD;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IGL_STATIC_LIBRARY;NOMINMAX;IMGUI_IMPL_OPENGL_LOADER_GLAD;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glad\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glfw\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\.;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..\imgui\examples;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\stb;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glad\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glfw\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\.;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..\imgui\examples;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\stb;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\MinSizeRel\igl.lib;..\..\MinSizeRel\igl_opengl.lib;..\..\MinSizeRel\igl_opengl_glfw.lib;..\..\MinSizeRel\igl_opengl_glfw_imgui.lib;..\..\MinSizeRel\igl_png.lib;..\..\MinSizeRel\igl_opengl_glfw.lib;..\..\MinSizeRel\imgui.lib;..\..\MinSizeRel\glfw3.lib;..\..\MinSizeRel\igl_opengl.lib;..\..\MinSizeRel\igl.lib;opengl32.lib;..\..\MinSizeRel\glad.lib;..\..\MinSizeRel\igl_stb_image.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/MinSizeRel/sandBox_bin.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/MinSizeRel/sandBox_bin.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glad\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glfw\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\.;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..\imgui\examples;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\stb;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IGL_STATIC_LIBRARY;NOMINMAX;IMGUI_IMPL_OPENGL_LOADER_GLAD;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IGL_STATIC_LIBRARY;NOMINMAX;IMGUI_IMPL_OPENGL_LOADER_GLAD;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glad\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glfw\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\.;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..\imgui\examples;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\stb;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glad\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\glfw\include;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\.;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\libigl-imgui\..\imgui\examples;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\external\stb;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\RelWithDebInfo\igl.lib;..\..\RelWithDebInfo\igl_opengl.lib;..\..\RelWithDebInfo\igl_opengl_glfw.lib;..\..\RelWithDebInfo\igl_opengl_glfw_imgui.lib;..\..\RelWithDebInfo\igl_png.lib;..\..\RelWithDebInfo\igl_opengl_glfw.lib;..\..\RelWithDebInfo\imgui.lib;..\..\RelWithDebInfo\glfw3.lib;..\..\RelWithDebInfo\igl_opengl.lib;..\..\RelWithDebInfo\igl.lib;opengl32.lib;..\..\RelWithDebInfo\glad.lib;..\..\RelWithDebInfo\igl_stb_image.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/RelWithDebInfo/sandBox_bin.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/RelWithDebInfo/sandBox_bin.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/sandBox/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse -BC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build --check-stamp-file C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/tutorial/sandBox/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\tutorial\sandBox\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/sandBox/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse -BC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build --check-stamp-file C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/tutorial/sandBox/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\tutorial\sandBox\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/sandBox/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse -BC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build --check-stamp-file C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/tutorial/sandBox/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\tutorial\sandBox\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/sandBox/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse -BC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build --check-stamp-file C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/tutorial/sandBox/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\tutorial\sandBox\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\tutorial\sandBox\CollapseableMeshDataIGL.cpp" />
+    <ClCompile Include="..\..\..\tutorial\sandBox\CollapseableMeshDataQUAD.cpp" />
+    <ClCompile Include="..\..\..\tutorial\sandBox\CollapseableSandBoxIGL.cpp" />
+    <ClCompile Include="..\..\..\tutorial\sandBox\CollapseableSandBoxQUAD.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\sandBox.cpp" />
+    <ClInclude Include="..\..\..\tutorial\sandBox\CollapseableMeshDataIGL.h" />
+    <ClInclude Include="..\..\..\tutorial\sandBox\CollapseableMeshDataQUAD.h" />
+    <ClInclude Include="..\..\..\tutorial\sandBox\CollapseableSandBox.h" />
+    <ClInclude Include="..\..\..\tutorial\sandBox\CollapseableSandBoxIGL.h" />
+    <ClInclude Include="..\..\..\tutorial\sandBox\CollapseableSandBoxQUAD.h" />
+    <ClInclude Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\sandBox.h" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\main.cpp" />
+    <ClInclude Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\inputManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\ZERO_CHECK.vcxproj">
+      <Project>{8C52AE48-D7DB-3421-BB0F-478C3FF533D0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\glad\glad.vcxproj">
+      <Project>{1A67CC25-CDAC-3302-978F-772A64E234B8}</Project>
+      <Name>glad</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\glfw\src\glfw.vcxproj">
+      <Project>{BC93BED4-B050-3051-8C51-622052D23239}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\igl.vcxproj">
+      <Project>{E4CA0307-8548-32E9-A1DC-49094941D537}</Project>
+      <Name>igl</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\igl_opengl.vcxproj">
+      <Project>{F087C7E1-2762-3D81-91B7-56654511B507}</Project>
+      <Name>igl_opengl</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\igl_opengl_glfw.vcxproj">
+      <Project>{BC192EF2-5FC7-3B3E-ACCB-A4654DDBFA4F}</Project>
+      <Name>igl_opengl_glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\igl_opengl_glfw_imgui.vcxproj">
+      <Project>{867AB1DC-4608-3214-B1A7-F686B95A891C}</Project>
+      <Name>igl_opengl_glfw_imgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\igl_png.vcxproj">
+      <Project>{15C73B27-53AD-3867-99F9-30E7698092CD}</Project>
+      <Name>igl_png</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\stb_image\igl_stb_image.vcxproj">
+      <Project>{889583F1-B38D-319C-A57F-F0B5AEC31DC1}</Project>
+      <Name>igl_stb_image</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\imgui\imgui.vcxproj">
+      <Project>{EA3AE19C-5816-35D8-85AF-62D7C9F46F04}</Project>
+      <Name>imgui</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

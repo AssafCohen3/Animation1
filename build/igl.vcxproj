@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E4CA0307-8548-32E9-A1DC-49094941D537}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>igl</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">igl.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">igl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">igl.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">igl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">igl.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">igl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">igl.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">igl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /w /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;IGL_STATIC_LIBRARY;NOMINMAX;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;IGL_STATIC_LIBRARY;NOMINMAX;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /w /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IGL_STATIC_LIBRARY;NOMINMAX;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IGL_STATIC_LIBRARY;NOMINMAX;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /w /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IGL_STATIC_LIBRARY;NOMINMAX;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IGL_STATIC_LIBRARY;NOMINMAX;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /w /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IGL_STATIC_LIBRARY;NOMINMAX;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IGL_STATIC_LIBRARY;NOMINMAX;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\..\external\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse -BC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build --check-stamp-file C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeCCompiler.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeCXXCompiler.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeRCCompiler.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeSystem.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\CXXFeatures.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\DownloadProject.CMakeLists.cmake.in;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\DownloadProject.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\LibiglDownloadExternal.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\LibiglWindows.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse -BC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build --check-stamp-file C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeCCompiler.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeCXXCompiler.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeRCCompiler.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeSystem.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\CXXFeatures.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\DownloadProject.CMakeLists.cmake.in;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\DownloadProject.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\LibiglDownloadExternal.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\LibiglWindows.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse -BC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build --check-stamp-file C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeCCompiler.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeCXXCompiler.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeRCCompiler.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeSystem.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\CXXFeatures.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\DownloadProject.CMakeLists.cmake.in;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\DownloadProject.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\LibiglDownloadExternal.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\LibiglWindows.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse -BC:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build --check-stamp-file C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeCCompiler.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeCXXCompiler.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeRCCompiler.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\3.22.0\CMakeSystem.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\CXXFeatures.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\DownloadProject.CMakeLists.cmake.in;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\DownloadProject.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\LibiglDownloadExternal.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\LibiglWindows.cmake;C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\AABB.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\AtA_cached.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\EPS.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\HalfEdgeIterator.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\accumarray.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\active_set.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\adjacency_list.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\adjacency_matrix.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\all.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\all_edges.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\all_pairs_distances.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\ambient_occlusion.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\angular_distance.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\any.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\any_of.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\arap.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\arap_dof.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\arap_linear_block.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\arap_rhs.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\average_onto_faces.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\average_onto_vertices.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\avg_edge_length.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\axis_angle_to_quat.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\barycenter.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\barycentric_coordinates.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\barycentric_to_global.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\basename.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\bbw.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\bfs.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\bfs_orient.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\biharmonic_coordinates.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\bijective_composite_harmonic_mapping.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\bone_parents.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\boundary_conditions.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\boundary_facets.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\boundary_loop.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\bounding_box.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\bounding_box_diagonal.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\canonical_quaternions.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\cat.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\ceil.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\centroid.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\circulation.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\circumradius.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\collapse_edge.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\collapse_small_triangles.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\colon.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\colormap.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\column_to_quats.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\columnize.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\comb_cross_field.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\comb_frame_field.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\comb_line_field.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\combine.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\compute_frame_field_bisectors.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\connect_boundary_to_infinity.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\copyleft\marching_cubes.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\copyleft\offset_surface.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\copyleft\progressive_hulls.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\copyleft\progressive_hulls_cost_and_placement.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\copyleft\quadprog.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\copyleft\swept_volume.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\cotmatrix.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\cotmatrix_entries.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\cotmatrix_intrinsic.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\count.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\covariance_scatter_matrix.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\cross.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\cross_field_mismatch.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\crouzeix_raviart_cotmatrix.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\crouzeix_raviart_massmatrix.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\cumprod.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\cumsum.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\cut_mesh.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\cut_mesh_from_singularities.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\cut_to_disk.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\cylinder.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\dated_copy.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\decimate.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\deform_skeleton.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\delaunay_triangulation.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\dfs.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\diag.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\dihedral_angles.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\dijkstra.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\directed_edge_orientations.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\directed_edge_parents.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\dirname.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\dot.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\dot_row.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\doublearea.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\dqs.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\ears.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\edge_collapse_is_valid.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\edge_exists_near.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\edge_flaps.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\edge_lengths.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\edge_topology.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\edges.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\edges_to_path.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\eigs.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\euler_characteristic.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\exact_geodesic.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\example_fun.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\exterior_edges.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\extract_manifold_patches.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\extract_non_manifold_edge_curves.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\face_areas.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\face_occurrences.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\faces_first.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\facet_components.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\false_barycentric_subdivision.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\fast_winding_number.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\file_contents_as_string.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\file_dialog_open.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\file_dialog_save.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\file_exists.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\find.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\find_cross_field_singularities.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\find_zero.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\fit_plane.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\fit_rotations.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\flip_avoiding_line_search.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\flip_edge.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\flipped_triangles.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\flood_fill.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\floor.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\forward_kinematics.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\frame_field_deformer.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\frame_to_cross_field.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\frustum.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\gaussian_curvature.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\get_seconds.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\get_seconds_hires.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\grad.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\grad_intrinsic.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\grid.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\grid_search.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\group_sum_matrix.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\guess_extension.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\harmonic.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\harwell_boeing.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\hausdorff.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\heat_geodesics.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\hessian.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\hessian_energy.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\histc.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\hsv_to_rgb.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\in_element.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\infinite_cost_stopping_condition.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\inradius.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\internal_angles.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\intersect.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\intrinsic_delaunay_cotmatrix.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\intrinsic_delaunay_triangulation.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\invert_diag.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_border_vertex.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_boundary_edge.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_delaunay.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_dir.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_edge_manifold.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_file.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_intrinsic_delaunay.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_irregular_vertex.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_planar.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_readable.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_sparse.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_stl.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_symmetric.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_vertex_manifold.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\is_writable.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\isdiag.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\ismember.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\isolines.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\jet.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\knn.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\launch_medit.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\lbs_matrix.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\lexicographic_triangulation.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\limit_faces.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\line_field_mismatch.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\line_search.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\line_segment_in_rectangle.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\linprog.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\list_to_matrix.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\local_basis.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\look_at.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\loop.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\lscm.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\map_vertices_to_circle.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\mapping_energy_with_jacobians.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\marching_tets.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\massmatrix.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\massmatrix_intrinsic.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\mat_max.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\mat_min.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\mat_to_quat.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\matlab_format.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\matrix_to_list.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\max.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\max_faces_stopping_condition.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\max_size.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\median.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\min.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\min_quad_dense.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\min_quad_with_fixed.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\min_size.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\mod.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\mode.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\mvc.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\nchoosek.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\next_filename.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\normal_derivative.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\normalize_quat.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\normalize_row_lengths.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\normalize_row_sums.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\null.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\octree.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\on_boundary.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\orient_outward.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\orientable_patches.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\oriented_facets.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\orth.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\ortho.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\outer_element.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\parallel_transport_angles.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\partition.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\parula.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\path_to_executable.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\pathinfo.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\per_corner_normals.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\per_edge_normals.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\per_face_normals.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\per_vertex_attribute_smoothing.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\per_vertex_normals.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\per_vertex_point_to_plane_quadrics.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\piecewise_constant_winding_number.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\pinv.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\planarize_quad_mesh.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\point_in_circle.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\point_in_poly.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\point_mesh_squared_distance.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\point_simplex_squared_distance.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\polar_dec.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\polar_svd.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\polar_svd3x3.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\polygon_mesh_to_triangle_mesh.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\principal_curvature.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\print_ijv.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\print_vector.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\procrustes.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\project.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\project_isometrically_to_plane.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\project_to_line.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\project_to_line_segment.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\pseudonormal_test.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\pso.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\qslim.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\qslim_optimal_collapse_edge_callbacks.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\quad_planarity.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\quadric_binary_plus_operator.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\quat_conjugate.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\quat_mult.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\quat_to_axis_angle.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\quat_to_mat.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\quats_to_column.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\ramer_douglas_peucker.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\random_dir.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\random_points_on_mesh.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\random_quaternion.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\random_search.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\randperm.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\ray_box_intersect.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\ray_mesh_intersect.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\ray_sphere_intersect.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\readBF.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\readCSV.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\readDMAT.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\readMESH.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\readMSH.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\readNODE.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\readOBJ.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\readOFF.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\readPLY.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\readSTL.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\readTGF.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\readWRL.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\read_triangle_mesh.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\remesh_along_isoline.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\remove_duplicate_vertices.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\remove_duplicates.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\remove_unreferenced.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\reorder.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\repdiag.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\repmat.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\resolve_duplicated_faces.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\rgb_to_hsv.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\rotate_by_quat.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\rotate_vectors.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\rotation_matrix_from_directions.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\round.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\rows_to_matrix.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\sample_edges.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\scaf.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\seam_edges.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\segment_segment_intersect.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\setdiff.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\setunion.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\setxor.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\shape_diameter_function.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\shapeup.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\shortest_edge_and_midpoint.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\signed_angle.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\signed_distance.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\simplify_polyhedron.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\slice.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\slice_cached.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\slice_into.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\slice_mask.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\slim.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\snap_points.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\snap_to_canonical_view_quat.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\snap_to_fixed_up.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\solid_angle.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\sort.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\sort_angles.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\sort_triangles.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\sort_vectors_ccw.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\sortrows.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\sparse.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\sparse_cached.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\sparse_voxel_grid.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\speye.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\squared_edge_lengths.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\stdin_to_temp.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\straighten_seams.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\sum.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\svd3x3.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\svd3x3_avx.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\svd3x3_sse.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\swept_volume_bounding_box.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\swept_volume_signed_distance.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\tan_half_angle.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\tet_tet_adjacency.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\topological_hole_fill.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\trackball.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\transpose_blocks.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\triangle_fan.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\triangle_triangle_adjacency.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\triangles_from_strip.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\triangulated_grid.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\two_axis_valuator_fixed_up.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\uniformly_sample_two_manifold.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\unique.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\unique_edge_map.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\unique_rows.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\unique_simplices.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\unproject.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\unproject_in_mesh.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\unproject_onto_mesh.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\unproject_ray.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\unzip_corners.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\upsample.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\vector_area_matrix.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\vertex_components.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\vertex_triangle_adjacency.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\volume.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\voxel_grid.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\winding_number.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\writeBF.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\writeDMAT.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\writeMESH.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\writeOBJ.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\writeOFF.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\writePLY.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\writeSTL.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\writeTGF.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\writeWRL.cpp" />
+    <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\igl\write_triangle_mesh.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\ZERO_CHECK.vcxproj">
+      <Project>{8C52AE48-D7DB-3421-BB0F-478C3FF533D0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

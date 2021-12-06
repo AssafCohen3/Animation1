@@ -1,0 +1,38 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/FindOpenGL.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/CMakeLists.txt
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/CMakeFiles/3.22.0/CMakeCCompiler.cmake
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/CMakeFiles/3.22.0/CMakeCXXCompiler.cmake
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/CMakeFiles/3.22.0/CMakeRCCompiler.cmake
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/build/CMakeFiles/3.22.0/CMakeSystem.cmake
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/cmake/CXXFeatures.cmake
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/cmake/DownloadProject.CMakeLists.cmake.in
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/cmake/DownloadProject.cmake
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/cmake/LibiglDownloadExternal.cmake
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/cmake/LibiglWindows.cmake
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/cmake/libigl.cmake

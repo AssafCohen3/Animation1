@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\build\CMakeFiles\97130086fed9300304b9f1faa056bbc9\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C88DC155-B986-3351-B371-236E65EEB8B7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
