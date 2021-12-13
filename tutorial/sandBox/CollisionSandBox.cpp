@@ -120,7 +120,6 @@ bool CollisionSandBox::FindCollision(CollisionData* m1, CollisionData* m2) {
 				m2->DrawBoundingBox(data(m2->id), candidate_boxes.second.m_box, Eigen::RowVector3d(0, 1, 0));
 				m1->intersection_box_visible = true;
 				m2->intersection_box_visible = true;
-				// TODO draw boxes
 				return true;
 			}
 			else if (candidate_boxes.first.is_leaf()) {
