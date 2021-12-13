@@ -30,6 +30,9 @@ Eigen::Matrix4d Movable::MakeTransd()
 	return (Tout.matrix() * mat);
 }
 
+Eigen::Matrix3d Movable::MakeScaled() {
+	return Tin.linearExt();
+}
 void Movable::MyTranslate(Eigen::Vector3d amt, bool preRotation)
 {
 	
@@ -38,6 +41,7 @@ void Movable::MyTranslate(Eigen::Vector3d amt, bool preRotation)
 	else
 		Tout.translate(amt);
 }
+
 //angle in radians
 void Movable::MyRotate(Eigen::Vector3d rotAxis, double angle)
 {
@@ -59,35 +63,16 @@ void Movable::TranslateInSystem(Eigen::Matrix3d Mat, Eigen::Vector3d amt, bool p
 	MyTranslate(Mat.transpose() * amt, preRotation);
 }
 
-void Movable::RotateInSystem(Eigen::Matrix3d Mat, Eigen::Vector3d rotAxis, double angle)
+void Movable::RotateInSystem(Eigen::Vector3d rotAxis, double angle)
 {
-	MyRotate(Mat.transpose() * rotAxis, angle);
+	MyRotate(GetRotation().transpose() * rotAxis, angle);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void Movable::SetCenterOfRotation(Eigen::Vector3d amt)
+{
+	Tout.pretranslate(Tout.rotation().matrix().block<3, 3>(0, 0) * amt);
+	Tin.translate(-amt);
+}
 
 //void Movable::TranslateInSystem(Eigen::Matrix4d Mat, Eigen::Vector3d amt, bool preRotation)
 //{

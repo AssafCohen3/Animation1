@@ -33,6 +33,7 @@ void CollapseableSandBoxQUAD::Init(const std::string& config)
 			data().point_size = 10;
 			data().line_width = 2;
 			data().set_visible(false, 1);
+			std::cout << "vertices: " << data().V.rows() << ", traingles: " << data().F.rows() << std::endl;
 		}
 		nameFileout.close();
 		collapsable_data_list.resize(data_list.size());
@@ -65,7 +66,7 @@ void CollapseableSandBoxQUAD::Simplify(int faces_to_delete) {
 		if (!collapseable_data().collapse_edge(temp_V, temp_F, p, e, cost)) {
 			break;
 		}
-		std::cout << "edge " << e << ", cost = " << cost << ", new v position (" << Eigen::RowVectorXd(p) << ")" << std::endl;
+//		std::cout << "edge " << e << ", cost = " << cost << ", new v position (" << Eigen::RowVectorXd(p) << ")" << std::endl;
 		updated = true;
 	}
 	if (updated) {

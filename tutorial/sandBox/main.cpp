@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
   Display *disp = new Display(1200, 800, "Wellcome");
   Renderer renderer;
 
-  CollapseableSandBoxQUAD viewer;
+  CollisionSandBox viewer;
   
   igl::opengl::glfw::imgui::ImGuiMenu* menu = new igl::opengl::glfw::imgui::ImGuiMenu();
   viewer.Init("configuration.txt");

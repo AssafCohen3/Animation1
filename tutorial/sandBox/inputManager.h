@@ -3,6 +3,7 @@
 #include "igl/opengl/glfw/Renderer.h"
 #include "sandBox.h"
 #include <tutorial/sandBox/CollapseableSandBox.h>
+#include <tutorial/sandBox/CollisionSandBox.h>
 //#include <igl/opengl/glfw/imgui/ImGuiMenu.h>
 //#include <igl/opengl/glfw/imgui/ImGuiHelpers.h>
 //#include <../imgui/imgui.h>
@@ -101,7 +102,7 @@ void glfw_window_size(GLFWwindow* window, int width, int height)
 static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int action, int modifier)
 {
 	Renderer* rndr = (Renderer*) glfwGetWindowUserPointer(window);
-	CollapseableSandBox* scn = (CollapseableSandBox*)rndr->GetScene();
+	CollisionSandBox* scn = (CollisionSandBox*)rndr->GetScene();
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, GL_TRUE);
 
@@ -114,6 +115,12 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 			rndr->core().is_animating = !rndr->core().is_animating;
 			break;
 		}
+		case 'C':
+			scn->EraseAllIntersectionBoxes();
+			break;
+		case 'c':
+			scn->collision_data()->EraseIntersectionBox(scn->data());
+			break;
 		case 'F':
 		case 'f':
 		{
@@ -131,6 +138,12 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 		case 'l':
 		{
 			rndr->core().toggle(scn->data().show_lines);
+			break;
+		}
+		case 'M':
+		case 'm':
+		{
+			scn->SetAnimation();
 			break;
 		}
 		case 'O':
@@ -157,31 +170,22 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 		case ':':
 			scn->data().show_faceid = !scn->data().show_faceid;
 			break;
+		case 'q':
+		case 'Q':
+		case 'v':
+		case 'V':
+			scn->ModifyVelocity(key);
+			break;
 		case 'w':
 		case 'W':
-			rndr->TranslateCamera(Eigen::Vector3f(0, 0, 0.03f));
-			break;
 		case 's':
 		case 'S':
-			rndr->TranslateCamera(Eigen::Vector3f(0, 0, -0.03f));
-			break;
 		case GLFW_KEY_UP:
-			rndr->TranslateCamera(Eigen::Vector3f(0, 0.01f,0));
-			break;
 		case GLFW_KEY_DOWN:
-			rndr->TranslateCamera(Eigen::Vector3f(0, -0.01f,0));
-
-			break;
 		case GLFW_KEY_LEFT:
-				rndr->TranslateCamera(Eigen::Vector3f(-0.01f, 0,0));
-			break;
 		case GLFW_KEY_RIGHT:
-			rndr->TranslateCamera(Eigen::Vector3f(0.01f, 0, 0));
+			scn->ChangeDirection(key);
 			break;
-		case ' ':
-			scn->Simplify();
-			break;
-		
 		default: 
 			Eigen::Vector3f shift;
 			float scale;

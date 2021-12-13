@@ -12,6 +12,7 @@ public:
 	Eigen::Matrix4f MakeTransScale();
 	Eigen::Matrix4d MakeTransd();
 	Eigen::Matrix4d MakeTransScaled();
+	Eigen::Matrix3d MakeScaled();
 	void MyTranslate(Eigen::Vector3d amt, bool preRotation);
 	void MyRotate(Eigen::Vector3d rotAxis, double angle);
 	void MyRotate(const Eigen::Matrix3d &rot);
@@ -19,7 +20,7 @@ public:
 
 	void TranslateInSystem(Eigen::Matrix3d Mat, Eigen::Vector3d amt, bool preRotation);
 
-	void RotateInSystem(Eigen::Matrix3d Mat, Eigen::Vector3d rotAxis, double angle);
+	void RotateInSystem(Eigen::Vector3d rotAxis, double angle);
 
 	void SetCenterOfRotation(Eigen::Vector3d amt);
 

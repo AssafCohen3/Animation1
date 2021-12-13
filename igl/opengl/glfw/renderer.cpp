@@ -116,7 +116,9 @@ IGL_INLINE void Renderer::init(igl::opengl::glfw::Viewer* viewer,int coresNum, i
 		{
 			core().toggle(scn->data_list[i].show_faces);
 			core().toggle(scn->data_list[i].show_lines);
-			core().toggle(scn->data_list[i].show_texture );
+			core().toggle(scn->data_list[i].show_texture);
+			core().toggle(scn->data_list[i].show_overlay);
+			core().toggle(scn->data_list[i].show_overlay_depth);
 		}
 		//Eigen::Vector3d v = -scn->GetCameraPosition();
 		//TranslateCamera(v.cast<float>());
@@ -160,13 +162,14 @@ void Renderer::MouseProcessing(int button)
 		
 			scn->data().TranslateInSystem(scn->GetRotation(), Eigen::Vector3d(xToMove, 0, 0), true);
 			scn->data().TranslateInSystem(scn->GetRotation(), Eigen::Vector3d(0, yToMove, 0), true);
-			scn->WhenTranslate();
+			// TODO maybe we want to detect collisions with mouse dragging also?
+			//scn->WhenTranslate(scn->data().id);
 		}
 		else
 		{
-			scn->data().RotateInSystem(scn->data().GetRotation(), Eigen::Vector3d(1, 0, 0), yrel / 180);
+			scn->data().RotateInSystem(Eigen::Vector3d(1, 0, 0), yrel / 180);
 
-			scn->data().RotateInSystem(scn->data().GetRotation(), Eigen::Vector3d(0, 1, 0), xrel / 180);
+			scn->data().RotateInSystem(Eigen::Vector3d(0, 1, 0), xrel / 180);
 
 		}
 	}

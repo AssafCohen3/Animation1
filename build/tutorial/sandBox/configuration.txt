@@ -1,2 +1,2 @@
-C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/data/sphere.obj
-C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/data/cube.obj
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/data/bunny.off
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/data/bunny.off

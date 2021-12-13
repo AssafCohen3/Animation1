@@ -82,22 +82,6 @@ namespace glfw
     data().set_face_based(false);
 
     
-#ifndef IGL_VIEWER_VIEWER_QUIET
-    const std::string usage(R"(igl::opengl::glfw::Viewer usage:
-  [drag]  Rotate scene
-  A,a     Toggle animation (tight draw loop)
-  F,f     Toggle face based
-  I,i     Toggle invert normals
-  L,l     Toggle wireframe
-  O,o     Toggle orthographic/perspective projection
-  T,t     Toggle filled faces
-  [,]     Toggle between cameras
-  1,2     Toggle between models
-  ;       Toggle vertex labels
-  :       Toggle face labels)"
-);
-    std::cout<<usage<<std::endl;
-#endif
   }
 
   IGL_INLINE Viewer::~Viewer()

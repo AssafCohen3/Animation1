@@ -48,7 +48,7 @@ namespace glfw
    // enum class MouseMode { None, Rotation, Zoom, Pan, Translation} mouse_mode;
     virtual void Init(const std::string config);
 	virtual void Animate() {}
-	virtual void WhenTranslate() {}
+	virtual void WhenTranslate(int mesh_id) {}
 	virtual Eigen::Vector3d GetCameraPosition() { return Eigen::Vector3d(0, 0, 0); }
 	virtual Eigen::Vector3d GetCameraForward() { return Eigen::Vector3d(0, 0, -1); }
 	virtual Eigen::Vector3d GetCameraUp() { return Eigen::Vector3d(0, 1, 0); }
@@ -58,7 +58,7 @@ namespace glfw
     Viewer();
     virtual ~Viewer();
     // Mesh IO
-    IGL_INLINE bool load_mesh_from_file(const std::string & mesh_file_name);
+    IGL_INLINE virtual bool load_mesh_from_file(const std::string & mesh_file_name);
     IGL_INLINE bool save_mesh_to_file(const std::string & mesh_file_name);
    
     // Scene IO

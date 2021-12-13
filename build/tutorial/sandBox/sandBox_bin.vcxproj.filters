@@ -19,6 +19,15 @@
     <ClCompile Include="..\..\..\tutorial\sandBox\CollapseableSandBoxQUAD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\tutorial\sandBox\ExtendedSandBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tutorial\sandBox\CollisionSandBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tutorial\sandBox\CollisionData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\sandBox.h">
@@ -40,6 +49,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\tutorial\sandBox\CollapseableMeshDataQUAD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tutorial\sandBox\ExtendedSandBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tutorial\sandBox\CollisionSandBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tutorial\sandBox\CollisionData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
