@@ -64,7 +64,7 @@ void CollisionSandBox::Init(const std::string& config)
 		{
 			std::cout << "openning " << item_name << std::endl;
 			load_mesh_from_file(item_name);
-
+			std::cout << "id: " << data().id << std::endl;
 			parents.push_back(-1);
 		}
 		nameFileout.close();

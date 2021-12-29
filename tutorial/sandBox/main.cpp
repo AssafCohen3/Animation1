@@ -4,13 +4,14 @@
 #include "sandBox.h"
 #include "CollapseableSandBoxIGL.h"
 #include "CollapseableSandBoxQUAD.h"
+#include "IKSandBox.h"
 
 int main(int argc, char *argv[])
 {
   Display *disp = new Display(1200, 800, "Wellcome");
   Renderer renderer;
 
-  CollisionSandBox viewer;
+  IKSandBox viewer(3); // initiate with 3 cylinders
   
   igl::opengl::glfw::imgui::ImGuiMenu* menu = new igl::opengl::glfw::imgui::ImGuiMenu();
   viewer.Init("configuration.txt");

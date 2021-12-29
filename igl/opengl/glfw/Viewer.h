@@ -72,7 +72,7 @@ namespace glfw
    
     // Helper functions
 
-    IGL_INLINE void open_dialog_load_mesh();
+    IGL_INLINE virtual void open_dialog_load_mesh();
     IGL_INLINE void open_dialog_save_mesh();
 
 	IGL_INLINE void draw() {}

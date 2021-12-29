@@ -28,6 +28,12 @@
     <ClCompile Include="..\..\..\tutorial\sandBox\CollisionData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\tutorial\sandBox\IKData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tutorial\sandBox\IKSandBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\sandBox.h">
@@ -58,6 +64,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\tutorial\sandBox\CollisionData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tutorial\sandBox\IKData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tutorial\sandBox\IKSandBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

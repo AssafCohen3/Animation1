@@ -65,12 +65,13 @@ void Movable::TranslateInSystem(Eigen::Matrix3d Mat, Eigen::Vector3d amt, bool p
 
 void Movable::RotateInSystem(Eigen::Vector3d rotAxis, double angle)
 {
-	MyRotate(GetRotation().transpose() * rotAxis, angle);
+	Tout.rotate(Eigen::AngleAxisd(angle, Tout.rotation().transpose() *
+		rotAxis.normalized()));
 }
 
 void Movable::SetCenterOfRotation(Eigen::Vector3d amt)
 {
-	Tout.pretranslate(Tout.rotation().matrix().block<3, 3>(0, 0) * amt);
+	Tout.pretranslate(amt);
 	Tin.translate(-amt);
 }
 

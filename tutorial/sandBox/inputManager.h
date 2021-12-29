@@ -2,8 +2,7 @@
 #include "igl/opengl/glfw/Display.h"
 #include "igl/opengl/glfw/Renderer.h"
 #include "sandBox.h"
-#include <tutorial/sandBox/CollapseableSandBox.h>
-#include <tutorial/sandBox/CollisionSandBox.h>
+#include <tutorial/sandBox/IKSandBox.h>
 //#include <igl/opengl/glfw/imgui/ImGuiMenu.h>
 //#include <igl/opengl/glfw/imgui/ImGuiHelpers.h>
 //#include <../imgui/imgui.h>
@@ -74,10 +73,15 @@ static void glfw_mouse_press(GLFWwindow* window, int button, int action, int mod
 static void glfw_mouse_scroll(GLFWwindow* window, double x, double y)
 {
 	Renderer* rndr = (Renderer*)glfwGetWindowUserPointer(window);
-	if(rndr->IsPicked())
-		rndr->GetScene()->data().MyScale(Eigen::Vector3d(1 + y * 0.01,1 + y * 0.01,1+y*0.01));
-	else
-		rndr->GetScene()->MyTranslate(Eigen::Vector3d(0,0, - y * 0.03),true);
+	IKSandBox* scn = (IKSandBox*)rndr->GetScene();
+	if (rndr->IsPicked()){
+		int meshToTranslate = std::min((int)scn->selected_data_index, 1);
+		scn->data(meshToTranslate).TranslateInSystem(scn->GetRotation(), Eigen::Vector3d(0, 0, -y * 0.03), true);
+		scn->WhenTranslate(meshToTranslate);
+	}
+	else {
+		scn->MyTranslate(Eigen::Vector3d(0, 0, -y * 0.03), true);
+	}
 }
 
 void glfw_window_size(GLFWwindow* window, int width, int height)
@@ -102,7 +106,8 @@ void glfw_window_size(GLFWwindow* window, int width, int height)
 static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int action, int modifier)
 {
 	Renderer* rndr = (Renderer*) glfwGetWindowUserPointer(window);
-	CollisionSandBox* scn = (CollisionSandBox*)rndr->GetScene();
+	IKSandBox* scn = (IKSandBox*)rndr->GetScene();
+	double dir;
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, GL_TRUE);
 
@@ -115,12 +120,6 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 			rndr->core().is_animating = !rndr->core().is_animating;
 			break;
 		}
-		case 'C':
-			scn->EraseAllIntersectionBoxes();
-			break;
-		case 'c':
-			scn->collision_data()->EraseIntersectionBox(scn->data());
-			break;
 		case 'F':
 		case 'f':
 		{
@@ -152,12 +151,18 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 			rndr->core().orthographic = !rndr->core().orthographic;
 			break;
 		}
+		case 'P':
+		case 'p':
+			scn->printSceneRotation();
+			break;
 		case 'T':
 		case 't':
-		{
-			rndr->core().toggle(scn->data().show_faces);
+			scn->printSceneTips();
 			break;
-		}
+		case 'D':
+		case 'd':
+			scn->printSceneDestination();
+			break;
 		case '[':
 		case ']':
 		{
@@ -170,23 +175,35 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 		case ':':
 			scn->data().show_faceid = !scn->data().show_faceid;
 			break;
-		case 'q':
-		case 'Q':
-		case 'v':
-		case 'V':
-			scn->ModifyVelocity(key);
+		case ' ':
+			scn->SetAnimation();
+			if (!scn->isActive) {
+				scn->fixZAxisRotation();
+			}
 			break;
-		case 'w':
-		case 'W':
-		case 's':
-		case 'S':
 		case GLFW_KEY_UP:
 		case GLFW_KEY_DOWN:
-		case GLFW_KEY_LEFT:
-		case GLFW_KEY_RIGHT:
-			scn->ChangeDirection(key);
+			dir = key == GLFW_KEY_DOWN ? -1 : 1;
+			if (scn->selected_data_index > 0) {
+				scn->data().MyRotate(Eigen::Vector3d(1, 0, 0), dir * 0.1);
+				scn->WhenTranslate(scn->selected_data_index);
+			}
+			else {
+				scn->MyRotate(Eigen::Vector3d(1, 0, 0), dir * 0.1);
+			}
 			break;
-		default: 
+		case GLFW_KEY_RIGHT:
+		case GLFW_KEY_LEFT:
+			dir = key == GLFW_KEY_LEFT ? -1 : 1;
+			if (scn->selected_data_index > 0) {
+				scn->data().MyRotate(scn->data().GetRotation().transpose() * Eigen::Vector3d(0, 0, 1), dir * 0.1);
+				scn->WhenTranslate(scn->selected_data_index);
+			}
+			else {
+				scn->MyRotate(Eigen::Vector3d(0, 1, 0), dir * 0.1);
+			}
+			break;
+		default:
 			Eigen::Vector3f shift;
 			float scale;
 			rndr->core().get_scale_and_shift_to_fit_mesh(scn->data().V, scn->data().F, scale, shift);

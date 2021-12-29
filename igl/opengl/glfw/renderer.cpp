@@ -159,18 +159,22 @@ void Renderer::MouseProcessing(int button)
 			Eigen::Matrix4f tmpM = core().proj;
 			double xToMove = -(double)xrel / core().viewport[3] * (z+2*near) * (far) / (far + 2*near) * 2.0 * tanf(angle / 360 * M_PI) / (core().camera_zoom * core().camera_base_zoom);
 			double yToMove = (double)yrel / core().viewport[3] *(z+2*near) * (far ) / (far+ 2*near) * 2.0 * tanf(angle / 360 * M_PI) / (core().camera_zoom * core().camera_base_zoom);
-		
-			scn->data().TranslateInSystem(scn->GetRotation(), Eigen::Vector3d(xToMove, 0, 0), true);
-			scn->data().TranslateInSystem(scn->GetRotation(), Eigen::Vector3d(0, yToMove, 0), true);
-			// TODO maybe we want to detect collisions with mouse dragging also?
-			//scn->WhenTranslate(scn->data().id);
+			int meshIdToMove = std::min((int)scn->selected_data_index, 1);
+			scn->data_list[meshIdToMove].TranslateInSystem(scn->GetRotation(), Eigen::Vector3d(xToMove, 0, 0), true);
+			scn->data_list[meshIdToMove].TranslateInSystem(scn->GetRotation(), Eigen::Vector3d(0, yToMove, 0), true);
+			scn->WhenTranslate(meshIdToMove);
 		}
 		else
 		{
-			scn->data().RotateInSystem(Eigen::Vector3d(1, 0, 0), yrel / 180);
-
-			scn->data().RotateInSystem(Eigen::Vector3d(0, 1, 0), xrel / 180);
-
+			if (scn->selected_data_index > 0) {
+				scn->data().MyRotate(Eigen::Vector3d(1, 0, 0), yrel / 180);
+				scn->data().MyRotate(scn->data().GetRotation().transpose() * Eigen::Vector3d(0, 0, 1), xrel / 180);
+				scn->WhenTranslate(scn->selected_data_index);
+			}
+			else{
+				scn->data().RotateInSystem(Eigen::Vector3d(1, 0, 0), yrel / 180);
+				scn->data().RotateInSystem(Eigen::Vector3d(0, 1, 0), xrel / 180);
+			}
 		}
 	}
 	else
