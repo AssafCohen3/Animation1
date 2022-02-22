@@ -1,2 +1,2 @@
-C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/data/sphere.obj
-C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/data/zCylinder.obj
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/data/snake2.obj
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/textures/snake1.png

@@ -141,7 +141,8 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 		case 'T':
 		case 't':
 		{
-			rndr->core().toggle(scn->data().show_faces);
+			rndr->core().get_scale_and_shift_to_fit_mesh(scn->data(0).V, scn->data(0).F, scale, shift);
+			//rndr->core().toggle(scn->data().show_faces);
 			break;
 		}
 		case '[':

@@ -328,8 +328,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\..\..\tutorial\sandBox\CollisionData.cpp" />
     <ClCompile Include="..\..\..\tutorial\sandBox\CollisionSandBox.cpp" />
     <ClCompile Include="..\..\..\tutorial\sandBox\ExtendedSandBox.cpp" />
+    <ClCompile Include="..\..\..\tutorial\sandBox\Game.cpp" />
     <ClCompile Include="..\..\..\tutorial\sandBox\IKData.cpp" />
     <ClCompile Include="..\..\..\tutorial\sandBox\IKSandBox.cpp" />
+    <ClCompile Include="..\..\..\tutorial\sandBox\Snake.cpp" />
+    <ClCompile Include="..\..\..\tutorial\sandBox\SnakeLink.cpp" />
     <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\sandBox.cpp" />
     <ClInclude Include="..\..\..\tutorial\sandBox\CollapseableMeshDataIGL.h" />
     <ClInclude Include="..\..\..\tutorial\sandBox\CollapseableMeshDataQUAD.h" />
@@ -339,8 +342,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="..\..\..\tutorial\sandBox\CollisionData.h" />
     <ClInclude Include="..\..\..\tutorial\sandBox\CollisionSandBox.h" />
     <ClInclude Include="..\..\..\tutorial\sandBox\ExtendedSandBox.h" />
+    <ClInclude Include="..\..\..\tutorial\sandBox\Game.h" />
     <ClInclude Include="..\..\..\tutorial\sandBox\IKData.h" />
     <ClInclude Include="..\..\..\tutorial\sandBox\IKSandBox.h" />
+    <ClInclude Include="..\..\..\tutorial\sandBox\Snake.h" />
+    <ClInclude Include="..\..\..\tutorial\sandBox\SnakeLink.h" />
     <ClInclude Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\sandBox.h" />
     <ClCompile Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\main.cpp" />
     <ClInclude Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\inputManager.h" />

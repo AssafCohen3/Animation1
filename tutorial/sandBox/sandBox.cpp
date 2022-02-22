@@ -32,7 +32,10 @@ void SandBox::Init(const std::string &config)
 			
 			parents.push_back(-1);
 			data().add_points(Eigen::RowVector3d(0, 0, 0), Eigen::RowVector3d(0, 0, 1));
-			data().show_overlay_depth = false;
+			data().show_faces |= 2;
+			data().show_texture |= 2;
+			data().show_overlay |= 2;
+			data().show_overlay_depth |= 2;
 			data().point_size = 10;
 			data().line_width = 2;
 			data().set_visible(false, 1);
