@@ -15,16 +15,17 @@
 #include "Eigen/core"
 #include "igl/PI.h"
 
-#define STEPS_MULTIPLIER	    0.005
+#define STEPS_MULTIPLIER	    0.1
 #define SNAKE_LINK_LENGTH       0.5
 #define SNAKE_LINKS_NUM         16
 #define MIN_VELOCITY            0.1
 #define VELOCITY_INCREMENT_SIZE 0.1
 #define ANGLE_CHANGE_SIZE       90
 #define ANGLE_THRESHOLD         0.0001
-#define FABRIK_MIN_ITERATIONS   30
-#define FABRIK_DELTA            1
-#define ANIMATION_DELTA_CHANGE  0.01
+#define FABRIK_MIN_ITERATIONS   20
+#define FABRIK_DELTA            1.0
+#define FABRIK_ANGLE_STEP       1.0
+#define ANIMATION_DELTA_CHANGE  0.02
 
 class Snake {
 public:
@@ -33,18 +34,32 @@ public:
     void InitData(igl::opengl::ViewerData& vd);
     void ScaleSnake(igl::opengl::ViewerData& vd);
     void Animate(igl::opengl::glfw::Viewer& scn, igl::opengl::ViewerData& vd);
-    void UpdateMovement();
-    Eigen::Vector4d GenerateSnakeDestination();
+    void AnimateSnakeAndMove();
+    void GetChainCopy(std::vector<SnakeLink>& linksCopy);
+    void AlignBodyToHeadNew();
+    void AlignBodyToHead();
+    void MoveStraightForward();
+    //void MoveForward();
+    //void UpdateMovement();
+    //Eigen::Vector4d GenerateSnakeDestination();
     bool checkIfTargetReached();
-    void RefreshFabrikDestination();
-    void FabrikStep(igl::opengl::ViewerData& vd);
+    bool checkIfTargetReached(Eigen::Vector3d headPos);
+    void CalculateFabrikDestination(Eigen::Vector3d dir);
+    void FabrikSolver(std::vector<SnakeLink>& tmpLinks);
+    void FabrikSolverNew(std::vector<SnakeLink>& tmpLinks);
+    void FabrikSolver();
+    //void RefreshFabrikDestination();
+    //void FabrikStep(igl::opengl::ViewerData& vd);
     void UpdateSkinning(igl::opengl::ViewerData& vd);
+    void CalculateInverseKinematics(igl::opengl::ViewerData& vd);
+    void CalculateInverseKinematics();
     void fixZAxisRotation();
     void updateDirection(igl::opengl::ViewerData& vd, int newDirection);
     void updateVelocity(int key);
-    void UpdateTips(Eigen::Matrix4d baseTransformations, int firstIndex);
-    Eigen::Matrix4d CalcLinkParentsTransformation(int i);
-    Eigen::Matrix3d CalcLinkParentsRotation(int i);
+    void fixZAxisRotation(std::vector<SnakeLink>& chainLinks);
+    //void UpdateTips(Eigen::Matrix4d baseTransformations, int firstIndex);
+    //Eigen::Matrix4d CalcLinkParentsTransformation(int i);
+    //Eigen::Matrix3d CalcLinkParentsRotation(int i);
     void CalculateWeights();
     void CalculateSkeleton(igl::opengl::ViewerData& vd);
 
@@ -52,15 +67,19 @@ public:
 
     void UpdateLinksGlobalTransformations(int firstIndex);
 
+    void UpdateChainGlobalTransformations(int firstIndex, std::vector<SnakeLink>& chainLinks);
+
     std::vector<SnakeLink*> links;
-    Eigen::Vector4d direction;
+    Eigen::Vector3d direction;
     Eigen::MatrixXd weights;
     Eigen::MatrixXd originalV;
-    Eigen::Vector4d fabrikDestination;
+    Eigen::Vector3d fabrikDestination;
     double snakeLength;
     double snakeZMax;
     double velocity;
     double animationDelta;
+    double directionAngle;
+    bool aligning;
     int fabCount;
 
     Eigen::RowVector3d sea_green;

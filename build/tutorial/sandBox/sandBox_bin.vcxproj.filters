@@ -40,9 +40,6 @@
     <ClCompile Include="..\..\..\tutorial\sandBox\Snake.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\tutorial\sandBox\SnakeLink.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\sandBox.h">
@@ -90,6 +87,9 @@
     <ClInclude Include="..\..\..\tutorial\sandBox\SnakeLink.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\tutorial\sandBox\PriceObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\Lenovo\Documents\animation\EngineForAnimationCourse\tutorial\sandBox\CMakeLists.txt" />
@@ -101,5 +101,8 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{22EA1D68-2876-3F77-8BDF-BB2B42B9637C}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\..\tutorial\sandBox\Eigen.natvis" />
   </ItemGroup>
 </Project>

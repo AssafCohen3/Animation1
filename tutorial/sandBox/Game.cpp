@@ -206,19 +206,15 @@ void Game::pre_draw()
 void Game::InitMesh() {
 	data().point_size = 10;
 	data().line_width = 2;
+	data().show_overlay ^= 2;
+	data().show_overlay_depth ^= 2;
 	data().set_visible(false, 1);
 }
 void Game::Animate()
 {
 	if (isActive)
 	{
-		if (TUTORIAL) {
-			pre_draw();
-		}
-		else {
-			snake.Animate(*this, data(0));
-			//SetAnimation();
-		}
+		snake->Animate(*this, data(snake->get));
 	}
 }
 

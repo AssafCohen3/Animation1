@@ -16,9 +16,12 @@ int main(int argc, char *argv[])
   renderer.init(&viewer,2,menu);
 
   disp->SetRenderer(&renderer);
-  renderer.core().trackball_angle.normalize();
-  renderer.core().camera_zoom = 2.5;
+  //renderer.core().trackball_angle.normalize();
+  renderer.core().camera_zoom = 0.3;
   renderer.core().animation_max_fps = 30.;
+  renderer.core().camera_eye = Eigen::Vector3f(0, 5, 1);
+  //renderer.core().camera_base_translation = Eigen::Vector3f(0, 0, -1);
+  renderer.core().camera_view_angle = 45;
   disp->launch_rendering(true);
   delete menu;
   delete disp;

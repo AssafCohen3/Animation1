@@ -10,6 +10,7 @@
 #include "igl/directed_edge_orientations.h"
 #include "igl/deform_skeleton.h"
 #include "Snake.h"
+#include "PriceObject.h"
 
 #define TUTORIAL false
 
@@ -26,23 +27,14 @@ public:
 	virtual bool load_mesh_from_file(const std::string& mesh_file_name) override;
 	void InitMesh();
 	void Init(const std::string& config);
-	void InitTest();
-	void pre_draw();
 	void keyPressed(int key);
 private:
 	// Prepare array-based edge data structures and priority queue
-	Snake snake;
+	Snake* snake;
+	std::vector<PriceObject*> prices;
+	std::vector<std::vector<bool>> levelsConfig;
+	int points;
 	void Animate();
-
-	Eigen::RowVector3d sea_green;
-	Eigen::MatrixXd V, W, C, U, M;
-	Eigen::MatrixXi F, BE;
-	Eigen::VectorXi P;
-	std::vector<RotationList > poses;
-	double anim_t;
-	double anim_t_dir;
-	bool use_dqs;
-	bool recompute;
 
 
 };

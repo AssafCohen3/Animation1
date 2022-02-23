@@ -8,7 +8,20 @@
 
 class SnakeLink {
 public:
-    SnakeLink();
+    SnakeLink():
+        initialStartTipLocation(Eigen::Vector3d::Zero()),
+        initialEndTipLocation(Eigen::Vector3d::Zero()),
+        currentStartTipLocation(Eigen::Vector3d::Zero()),
+        currentEndTipLocation(Eigen::Vector3d::Zero()),
+        localTranslationVector(Eigen::Vector3d::Zero()),
+        globalTranslationVector(Eigen::Vector3d::Zero()),
+        localRotation(Eigen::Quaterniond::Identity()),
+        globalRotation(Eigen::Quaterniond::Identity()),
+        localAnimationStartOrientation(Eigen::Quaterniond::Identity()),
+        localAnimationTargetOrientation(Eigen::Quaterniond::Identity())
+    {
+
+    }
     //Eigen::Vector4d getTip() { return tip; };
     //void setTip(Eigen::Vector4d newTip) { tip = newTip; };
     //Eigen::Vector4d getRestStartPose() { return restStartPose; };
@@ -52,26 +65,25 @@ public:
     Eigen::Quaterniond GetGlobalRotation() { return globalRotation; };
     void SetGlobalRotation(Eigen::Quaterniond rot) { globalRotation = rot; };
 
-    Eigen::Quaterniond GetGlobalAnimationStartOrientation() { return globalAnimationStartOrientation; };
-    void SetGlobalAnimationStartOrientation(Eigen::Quaterniond rot) { globalAnimationStartOrientation = rot; };
+    Eigen::Quaterniond GetLocalAnimationStartOrientation() { return localAnimationStartOrientation; };
+    void SetLocalAnimationStartOrientation(Eigen::Quaterniond rot) { localAnimationStartOrientation = rot; };
 
-    Eigen::Quaterniond GetGlobalAnimationTargetOrientation() { return globalAnimationTargetOrientation; };
-    void GetGlobalAnimationTargetOrientation(Eigen::Quaterniond rot) { globalAnimationTargetOrientation = rot; };
+    Eigen::Quaterniond GetLocalAnimationTargetOrientation() { return localAnimationTargetOrientation; };
+    void SetLocalAnimationTargetOrientation(Eigen::Quaterniond rot) { localAnimationTargetOrientation = rot; };
 
     void ApplyTransformations(Eigen::Quaterniond rot, Eigen::Vector3d t) {
         globalRotation = rot * localRotation;
-        globalTranslationVector = t - globalRotation * initialEndTipLocation + rot * (initialEndTipLocation + localTranslationVector);
+        globalTranslationVector = t - globalRotation * initialStartTipLocation + rot * (initialStartTipLocation + localTranslationVector);
         currentStartTipLocation = ApplyToPoint(initialStartTipLocation);
         currentEndTipLocation = ApplyToPoint(initialEndTipLocation);
     }
 
-    Eigen::Vector3d ApplyToPoint(Eigen::Quaterniond rot, Eigen::Vector3d t, Eigen::Vector3d p) {
-        Eigen::Quaterniond pOrientation = rot * globalRotation;
-        return pOrientation * p * pOrientation.conjugate() + rot * globalTranslationVector * rot.conjugate() + t;
+    Eigen::Vector3d ApplyToPoint(Eigen::Vector3d p) {
+        return globalRotation * p + globalTranslationVector;
     }
 
-    Eigen::Vector3d ApplyToPoint(Eigen::Vector3d p) {
-        return globalRotation * p * globalRotation.conjugate() + globalTranslationVector;
+    void Translate(Eigen::Vector3d t) {
+        localTranslationVector += t;
     }
 
     int id;
@@ -89,6 +101,6 @@ public:
     Eigen::Vector3d globalTranslationVector;
     Eigen::Quaterniond localRotation;
     Eigen::Quaterniond globalRotation;
-    Eigen::Quaterniond globalAnimationStartOrientation;
-    Eigen::Quaterniond globalAnimationTargetOrientation;
+    Eigen::Quaterniond localAnimationStartOrientation;
+    Eigen::Quaterniond localAnimationTargetOrientation;
 };
