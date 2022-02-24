@@ -10,7 +10,6 @@
 //#include "ImGuiHelpers.h"
 #include <igl/project.h>
 #include "ImGuiHelpers.h"
-
 #include "ImGuiMenu.h"
 #include "../imgui.h"
 #include "igl/opengl/glfw/imgui/imgui_impl_glfw.h"
@@ -181,7 +180,7 @@ IGL_INLINE void ImGuiMenu::draw_viewer_window(igl::opengl::glfw::Viewer* viewer,
 }
 
 
-IGL_INLINE void ImGuiMenu::draw_viewer_menu(igl::opengl::glfw::Viewer *viewer, std::vector<igl::opengl::ViewerCore>& core)
+IGL_INLINE void ImGuiMenu::draw_viewer_menu(Game *viewer, std::vector<igl::opengl::ViewerCore>& core)
 {
     bool* p_open = NULL;
     static bool no_titlebar = false;
@@ -220,55 +219,55 @@ IGL_INLINE void ImGuiMenu::draw_viewer_menu(igl::opengl::glfw::Viewer *viewer, s
         window_flags
     );
 
-  // Mesh
-  if (ImGui::CollapsingHeader("Mesh", ImGuiTreeNodeFlags_DefaultOpen))
-  {
-    float w = ImGui::GetContentRegionAvailWidth();
-    float p = ImGui::GetStyle().FramePadding.x;
-    if (ImGui::Button("Load##Mesh", ImVec2((w-p)/2.f, 0)))
-    {
-        int savedIndx = viewer->selected_data_index;
-      viewer->open_dialog_load_mesh();
-      if (viewer->data_list.size() > viewer->parents.size())
-      {
-          viewer->parents.push_back(-1);
-          viewer->data_list.back().set_visible(false, 1);
-          viewer->data_list.back().set_visible(true, 2);
-          viewer->data_list.back().show_faces = 3;
-          viewer->selected_data_index = savedIndx;
-      }
-    }
-    ImGui::SameLine(0, p);
-    if (ImGui::Button("Save##Mesh", ImVec2((w-p)/2.f, 0)))
-    {
-      viewer->open_dialog_save_mesh();
-    }
-  }
-
+  //// Mesh
+  //if (ImGui::CollapsingHeader("Mesh", ImGuiTreeNodeFlags_DefaultOpen))
+  //{
+  //  float w = ImGui::GetContentRegionAvailWidth();
+  //  float p = ImGui::GetStyle().FramePadding.x;
+  //  if (ImGui::Button("Load##Mesh", ImVec2((w-p)/2.f, 0)))
+  //  {
+  //      int savedIndx = viewer->selected_data_index;
+  //    viewer->open_dialog_load_mesh();
+  //    if (viewer->data_list.size() > viewer->parents.size())
+  //    {
+  //        viewer->parents.push_back(-1);
+  //        viewer->data_list.back().set_visible(false, 1);
+  //        viewer->data_list.back().set_visible(true, 2);
+  //        viewer->data_list.back().show_faces = 3;
+  //        viewer->selected_data_index = savedIndx;
+  //    }
+  //  }
+  //  ImGui::SameLine(0, p);
+  //  if (ImGui::Button("Save##Mesh", ImVec2((w-p)/2.f, 0)))
+  //  {
+  //    viewer->open_dialog_save_mesh();
+  //  }
+  //}
   // Viewing options
-  if (ImGui::CollapsingHeader("Viewing Options", ImGuiTreeNodeFlags_DefaultOpen))
+  if (ImGui::CollapsingHeader("Game", ImGuiTreeNodeFlags_DefaultOpen))
   {
-    if (ImGui::Button("Center object", ImVec2(-1, 0)))
+    if (ImGui::Button("Start level", ImVec2(-1, 0)))
     {
-      core[1].align_camera_center(viewer->data().V, viewer->data().F);
+      viewer->StartLevel();
     }
+    ImGui::Text("Current Level: %d\nLevel Points: %d\nTotal Points: %d", viewer->GetCurrentLevel(), viewer->GetLevelPoints(), viewer->GetGamePoints());
     //if (ImGui::Button("Snap canonical view", ImVec2(-1, 0)))
     //{
     //  core[1].snap_to_canonical_quaternion();
     //}
 
     // Zoom
-    ImGui::PushItemWidth(80 * menu_scaling());
-    ImGui::DragFloat("Zoom", &(core[1].camera_zoom), 0.05f, 0.1f, 20.0f);
+    //ImGui::PushItemWidth(80 * menu_scaling());
+    //ImGui::DragFloat("Zoom", &(core[1].camera_zoom), 0.05f, 0.1f, 20.0f);
 
-    // Select rotation type
-    int rotation_type = static_cast<int>(core[1].rotation_type);
-    static Eigen::Quaternionf trackball_angle = Eigen::Quaternionf::Identity();
-    static bool orthographic = true;
+    //// Select rotation type
+    //int rotation_type = static_cast<int>(core[1].rotation_type);
+    //static Eigen::Quaternionf trackball_angle = Eigen::Quaternionf::Identity();
+    //static bool orthographic = true;
 
-    // Orthographic view
-    ImGui::Checkbox("Orthographic view", &(core[1].orthographic));
-    ImGui::PopItemWidth();
+    //// Orthographic view
+    //ImGui::Checkbox("Orthographic view", &(core[1].orthographic));
+    //ImGui::PopItemWidth();
   }
 
   // Helper for setting viewport specific mesh options
@@ -284,34 +283,34 @@ IGL_INLINE void ImGuiMenu::draw_viewer_menu(igl::opengl::glfw::Viewer *viewer, s
 
 
   // Draw options
-  if (ImGui::CollapsingHeader("Draw Options", ImGuiTreeNodeFlags_DefaultOpen))
-  {
-    if (ImGui::Checkbox("Face-based", &(viewer->data().face_based)))
-    {
-      viewer->data().dirty = MeshGL::DIRTY_ALL;
-    }
-    make_checkbox("Show texture", viewer->data().show_texture);
-    if (ImGui::Checkbox("Invert normals", &(viewer->data().invert_normals)))
-    {
-      viewer->data().dirty |= igl::opengl::MeshGL::DIRTY_NORMAL;
-    }
-    make_checkbox("Show overlay", viewer->data().show_overlay);
-    make_checkbox("Show overlay depth", viewer->data().show_overlay_depth);
-    
-    ImGui::ColorEdit4("Line color", viewer->data().line_color.data(),
-        ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_PickerHueWheel);
-    ImGui::PushItemWidth(ImGui::GetWindowWidth() * 0.3f);
-    ImGui::DragFloat("Shininess", &(viewer->data().shininess), 0.05f, 0.0f, 100.0f);
-    ImGui::PopItemWidth();
-  }
+  //if (ImGui::CollapsingHeader("Draw Options", ImGuiTreeNodeFlags_DefaultOpen))
+  //{
+  //  if (ImGui::Checkbox("Face-based", &(viewer->data().face_based)))
+  //  {
+  //    viewer->data().dirty = MeshGL::DIRTY_ALL;
+  //  }
+  //  make_checkbox("Show texture", viewer->data().show_texture);
+  //  if (ImGui::Checkbox("Invert normals", &(viewer->data().invert_normals)))
+  //  {
+  //    viewer->data().dirty |= igl::opengl::MeshGL::DIRTY_NORMAL;
+  //  }
+  //  make_checkbox("Show overlay", viewer->data().show_overlay);
+  //  make_checkbox("Show overlay depth", viewer->data().show_overlay_depth);
+  //  
+  //  ImGui::ColorEdit4("Line color", viewer->data().line_color.data(),
+  //      ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_PickerHueWheel);
+  //  ImGui::PushItemWidth(ImGui::GetWindowWidth() * 0.3f);
+  //  ImGui::DragFloat("Shininess", &(viewer->data().shininess), 0.05f, 0.0f, 100.0f);
+  //  ImGui::PopItemWidth();
+  //}
 
-  // Overlays
-  if (ImGui::CollapsingHeader("Overlays", ImGuiTreeNodeFlags_DefaultOpen))
-  {
-    make_checkbox("Wireframe", viewer->data().show_lines);
-    make_checkbox("Fill", viewer->data().show_faces);
+  //// Overlays
+  //if (ImGui::CollapsingHeader("Overlays", ImGuiTreeNodeFlags_DefaultOpen))
+  //{
+  //  make_checkbox("Wireframe", viewer->data().show_lines);
+  //  make_checkbox("Fill", viewer->data().show_faces);
 
-  }
+  //}
   ImGui::End();
 }
 

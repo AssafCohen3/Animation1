@@ -29,7 +29,7 @@
 
 class Snake {
 public:
-    Snake();
+    Snake(int id);
     ~Snake();
     void InitData(igl::opengl::ViewerData& vd);
     void ScaleSnake(igl::opengl::ViewerData& vd);
@@ -37,38 +37,29 @@ public:
     void AnimateSnakeAndMove();
     void GetChainCopy(std::vector<SnakeLink>& linksCopy);
     void AlignBodyToHeadNew();
-    void AlignBodyToHead();
     void MoveStraightForward();
-    //void MoveForward();
-    //void UpdateMovement();
-    //Eigen::Vector4d GenerateSnakeDestination();
-    bool checkIfTargetReached();
     bool checkIfTargetReached(Eigen::Vector3d headPos);
     void CalculateFabrikDestination(Eigen::Vector3d dir);
     void FabrikSolver(std::vector<SnakeLink>& tmpLinks);
     void FabrikSolverNew(std::vector<SnakeLink>& tmpLinks);
-    void FabrikSolver();
-    //void RefreshFabrikDestination();
-    //void FabrikStep(igl::opengl::ViewerData& vd);
     void UpdateSkinning(igl::opengl::ViewerData& vd);
     void CalculateInverseKinematics(igl::opengl::ViewerData& vd);
-    void CalculateInverseKinematics();
-    void fixZAxisRotation();
     void updateDirection(igl::opengl::ViewerData& vd, int newDirection);
     void updateVelocity(int key);
     void fixZAxisRotation(std::vector<SnakeLink>& chainLinks);
-    //void UpdateTips(Eigen::Matrix4d baseTransformations, int firstIndex);
-    //Eigen::Matrix4d CalcLinkParentsTransformation(int i);
-    //Eigen::Matrix3d CalcLinkParentsRotation(int i);
     void CalculateWeights();
-    void CalculateSkeleton(igl::opengl::ViewerData& vd);
-
-    void DrawSkeleton(igl::opengl::ViewerData& vd, Eigen::MatrixXd skelPoints, Eigen::MatrixXi skelEdges);
-
+    void DrawLayout(igl::opengl::ViewerData& vd);
     void UpdateLinksGlobalTransformations(int firstIndex);
-
     void UpdateChainGlobalTransformations(int firstIndex, std::vector<SnakeLink>& chainLinks);
+    void CalculateHeadKTree(igl::opengl::ViewerData& vd);
+    void Reset(igl::opengl::ViewerData& vd);
 
+    int GetId() { return id; };
+    void SetId(int id) { this->id = id; };
+
+    igl::AABB<Eigen::MatrixXd, 3>& GetKTree() { return kTree; };
+
+    int id;
     std::vector<SnakeLink*> links;
     Eigen::Vector3d direction;
     Eigen::MatrixXd weights;
@@ -80,10 +71,6 @@ public:
     double animationDelta;
     double directionAngle;
     bool aligning;
-    int fabCount;
-
+    igl::AABB<Eigen::MatrixXd, 3> kTree;
     Eigen::RowVector3d sea_green;
-    Eigen::MatrixXd W, C, U, SP;
-    Eigen::MatrixXi BE, SE;
-    Eigen::VectorXi P;
 };

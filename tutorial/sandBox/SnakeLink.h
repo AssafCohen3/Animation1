@@ -22,25 +22,6 @@ public:
     {
 
     }
-    //Eigen::Vector4d getTip() { return tip; };
-    //void setTip(Eigen::Vector4d newTip) { tip = newTip; };
-    //Eigen::Vector4d getRestStartPose() { return restStartPose; };
-    //void setRestStartPose(Eigen::Vector4d pose) { restStartPose = pose; };
-    //Eigen::Vector4d getRestEndPose() { return restEndPose; };
-    //void setRestEndPose(Eigen::Vector4d pose) { restEndPose = pose; };
-
-    //void translate(Eigen::Vector3d t) { transformation.translate(t); };
-    //void rotate(Eigen::Quaterniond q) { transformation.rotate(q); };
-    //void RotateInSystem(Eigen::Vector3d rotAxis, double angle) { transformation.rotate(Eigen::AngleAxisd(angle, transformation.rotation().transpose() *
-    //    rotAxis.normalized()));
-    //};
-    //Eigen::Quaterniond GetRotation() { return Eigen::Quaterniond(transformation.rotation()); };
-    //Eigen::Matrix4d MakeTransd() { 
-    //    return transformation.matrix(); 
-    //};
-    //Eigen::Quaterniond GetRestPose() { return restPos; };
-    //void SetRestPose(Eigen::Quaterniond pose) { restPos = pose; };
-
     Eigen::Vector3d GetInitialStartTipLocation() { return initialStartTipLocation; };
     void SetInitialStartTipLocation(Eigen::Vector3d loc) { initialStartTipLocation = loc; };
 
@@ -86,17 +67,18 @@ public:
         localTranslationVector += t;
     }
 
+    void ResetLocals() {
+        localTranslationVector = Eigen::Vector3d::Zero();
+        localRotation = Eigen::Quaterniond::Identity();
+        localAnimationStartOrientation = Eigen::Quaterniond::Identity();
+        localAnimationTargetOrientation = Eigen::Quaterniond::Identity();
+    }
+
     int id;
-    int parentId;
-    //Eigen::Vector4d tip;
-    //Eigen::Vector4d restStartPose;
-    //Eigen::Vector4d restEndPose;
-    //Eigen::Affine3d transformation;
     Eigen::Vector3d initialStartTipLocation;
     Eigen::Vector3d initialEndTipLocation;
     Eigen::Vector3d currentStartTipLocation;
     Eigen::Vector3d currentEndTipLocation;
-    //Eigen::Quaterniond restPos;
     Eigen::Vector3d localTranslationVector;
     Eigen::Vector3d globalTranslationVector;
     Eigen::Quaterniond localRotation;

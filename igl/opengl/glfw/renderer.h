@@ -6,6 +6,7 @@
 #include <igl/opengl/glfw/Viewer.h>
 #include <igl/opengl/glfw/imgui/ImGuiMenu.h>
 #include <igl/opengl/glfw/imgui/ImGuiHelpers.h>
+#include "tutorial/sandBox/Game.h"
 #include <../imgui/imgui.h>
 struct GLFWwindow;
 
@@ -85,7 +86,12 @@ public:
 
 	// Callbacks
 	 double Picking(double x, double y);
-	 inline void Animate() { scn->Animate(); };
+	 inline void Animate() { 
+		 scn->Animate(); 
+		 if (((Game*)scn)->UpdateCamera()) {
+			 ((Game*)scn)->SetCameraView(core());
+		 }
+	 };
 	IGL_INLINE bool key_pressed(unsigned int unicode_key, int modifier);
 	IGL_INLINE void resize(GLFWwindow* window,int w, int h); // explicitly set window size
 	IGL_INLINE void post_resize(GLFWwindow* window, int w, int h); // external resize due to user interaction

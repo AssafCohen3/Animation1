@@ -1,2 +1,3 @@
 C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/data/snake2.obj
 C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/textures/snake1.png
+C:/Users/Lenovo/Documents/animation/EngineForAnimationCourse/tutorial/data/cube.obj

@@ -73,10 +73,7 @@ static void glfw_mouse_scroll(GLFWwindow* window, double x, double y)
 {
 	Renderer* rndr = (Renderer*)glfwGetWindowUserPointer(window);
 	Game* scn = (Game*)rndr->GetScene();
-	if (rndr->IsPicked())
-		rndr->GetScene()->data().MyScale(Eigen::Vector3d(1 + y * 0.01, 1 + y * 0.01, 1 + y * 0.01));
-	else
-		rndr->GetScene()->MyTranslate(Eigen::Vector3d(0, 0, -y * 0.03), true);
+	rndr->GetScene()->MyTranslate(Eigen::Vector3d(0, 0, -y * 0.03), true);
 }
 
 void glfw_window_size(GLFWwindow* window, int width, int height)
@@ -109,55 +106,13 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 	else if(action == GLFW_PRESS || action == GLFW_REPEAT)
 		switch (key)
 		{
-		case 'A':
-		case 'a':
+		case 'c':
+		case 'C':
 		{
-			rndr->core().is_animating = !rndr->core().is_animating;
+			scn->ToggleCamera();
+			scn->SetCameraView(rndr->core());
 			break;
 		}
-		case 'F':
-		case 'f':
-		{
-			scn->data().set_face_based(!scn->data().face_based);
-			break;
-		}
-		case 'I':
-		case 'i':
-		{
-			scn->data().dirty |= igl::opengl::MeshGL::DIRTY_NORMAL;
-			scn->data().invert_normals = !scn->data().invert_normals;
-			break;
-		}
-		case 'L':
-		case 'l':
-		{
-			rndr->core().toggle(scn->data().show_lines);
-			break;
-		}
-		case 'M':
-		case 'm':
-		{
-			scn->SetAnimation();
-			break;
-		}
-		case 'O':
-		case 'o':
-		{
-			rndr->core().orthographic = !rndr->core().orthographic;
-			break;
-		}
-		case '[':
-		case ']':
-		{
-			rndr->ChangeCamera(key);
-			break;
-		}
-		case ';':
-			scn->data().show_vertid = !scn->data().show_vertid;
-			break;
-		case ':':
-			scn->data().show_faceid = !scn->data().show_faceid;
-			break;
 		case ' ':
 			scn->SetAnimation();
 			break;
@@ -165,23 +120,13 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 		case GLFW_KEY_DOWN:
 		case GLFW_KEY_RIGHT:
 		case GLFW_KEY_LEFT:
+		case 'W':
 		case 'w':
+		case 'S':
 		case 's':
 			scn->keyPressed(key);
 			break;
 		default:
-			Eigen::Vector3f shift;
-			float scale;
-			rndr->core().get_scale_and_shift_to_fit_mesh(scn->data().V, scn->data().F, scale, shift);
-			
-			std::cout << "near " << rndr->core().camera_dnear << std::endl;
-			std::cout << "far " << rndr->core().camera_dfar << std::endl;
-			std::cout << "angle " << rndr->core().camera_view_angle << std::endl;
-			std::cout << "base_zoom " << rndr->core().camera_base_zoom << std::endl;
-			std::cout << "zoom " << rndr->core().camera_zoom << std::endl;
-			std::cout << "shift " << shift << std::endl;
-			std::cout << "translate " << rndr->core().camera_translation << std::endl;
-
 			break;//do nothing
 		}
 }

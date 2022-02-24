@@ -75,6 +75,10 @@ void Movable::SetCenterOfRotation(Eigen::Vector3d amt)
 	Tin.translate(-amt);
 }
 
+void Movable::Reset() {
+	Tout = Eigen::Affine3d::Identity();
+	Tin = Eigen::Affine3d::Identity();
+}
 //void Movable::TranslateInSystem(Eigen::Matrix4d Mat, Eigen::Vector3d amt, bool preRotation)
 //{
 //	Eigen::Vector3d v = Mat.transpose().block<3, 3>(0, 0) * amt; //transpose instead of inverse

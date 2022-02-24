@@ -15,6 +15,7 @@
 #include "igl/opengl/ViewerCore.h"
 #include "igl/opengl/ViewerData.h"
 #include "igl/opengl/glfw/Display.h"
+#include "tutorial/sandBox/Game.h"
 #include <igl/igl_inline.h>
 #include <memory>
 ////////////////////////////////////////////////////////////////////////////////
@@ -80,7 +81,7 @@ public:
   IGL_INLINE virtual void draw_viewer_window(igl::opengl::glfw::Viewer* viewer, std::vector<igl::opengl::ViewerCore> &core);
 
   // Can be overwritten by `callback_draw_viewer_menu`
-  IGL_INLINE virtual void draw_viewer_menu(igl::opengl::glfw::Viewer* viewer, std::vector<igl::opengl::ViewerCore> &core);
+  IGL_INLINE virtual void draw_viewer_menu(Game* viewer, std::vector<igl::opengl::ViewerCore> &core);
 
   // Can be overwritten by `callback_draw_custom_window`
   IGL_INLINE virtual void draw_custom_window() { }

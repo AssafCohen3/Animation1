@@ -26,6 +26,8 @@ public:
 
 	Eigen::Matrix3d GetRotation() const{ return Tout.rotation().matrix(); }
 
+	void Reset();
+
 	virtual ~Movable() {}
 private:
 	Eigen::Affine3d Tout,Tin;
